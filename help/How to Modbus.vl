@@ -2,7 +2,7 @@
 <Document xmlns:p="property" xmlns:r="reflection" Id="BUHGogY9RSNNeI4Y9978X0" LanguageVersion="2024.6.6" Version="0.128">
   <NugetDependency Id="RiYNT4n3hT5MQ7peH9bi5n" Location="VL.CoreLib" Version="2024.6.6" />
   <Patch Id="RoppdK6QsINOIZAZAwq9Dv">
-    <Canvas Id="KK05DdZ4UKeN2XH2Gfw2qp" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <Canvas Id="KK05DdZ4UKeN2XH2Gfw2qp" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
 
     ************************ Application ************************
@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="Ow15Ca9PLxsPvi3X5Yf5Qs">
         <Canvas Id="IMSb7B1P9aNNyl61E9d8TT" CanvasType="Group">
-          <Node Bounds="96,129,96,19" Id="BUjlRsKUWjzMWsKkZLdF6j">
+          <Node Bounds="54,186,105,19" Id="BUjlRsKUWjzMWsKkZLdF6j">
             <p:NodeReference LastCategoryFullName="IO.Modbus.Modbus" LastDependency="VL.IO.Modbus.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Modbus" />
@@ -27,19 +27,66 @@
             <Pin Id="DBpCNGoXPPcL4GSWsoCchz" Name="Is Connected" Kind="OutputPin" />
             <Pin Id="Gu9m2EYxkb7Mn2lXrBs8T5" Name="Enable" Kind="InputPin" />
           </Node>
-          <Pad Id="GQayzErWd0ANwIrcgatUNk" Comment="IP Adresse" Bounds="99,65,35,15" ShowValueBox="true" isIOBox="true" Value="">
+          <Pad Id="GQayzErWd0ANwIrcgatUNk" Comment="IP Adresse" Bounds="56,106,108,15" ShowValueBox="true" isIOBox="true" Value="127.0.0.1">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
+          <Pad Id="VLcDbaMS62iM2xgwsjUm3h" Comment="Enable" Bounds="157,148,45,35" ShowValueBox="true" isIOBox="true" Value="True">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Kj009ucupYKMjeBzB0uQze" Comment="Is Connected" Bounds="156,236,35,35" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="45,320,130,106" Id="HRk4ZiQapWYPRDMvoXPVLO">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+              <Choice Kind="ApplicationStatefulRegion" Name="If" />
+            </p:NodeReference>
+            <Pin Id="N6B1c0lIcoVQRLN63WX8Ph" Name="Condition" Kind="InputPin" />
+            <Patch Id="SPxjgMjapRrPMIigYD18QW" ManuallySortedPins="true">
+              <Patch Id="UrvnhdnZmglPy1hSHkj5kJ" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="CDpyvu3E1VKMijNLJ3iBez" Name="Then" ManuallySortedPins="true" />
+              <Node Bounds="57,366,104,26" Id="LR0P3GfrY9JLZy2sKdbkbT">
+                <p:NodeReference LastCategoryFullName="IO.Modbus.Modbus" LastDependency="VL.IO.Modbus.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Modbus" />
+                  <Choice Kind="OperationCallFlag" Name="ReadInputRegisters" />
+                </p:NodeReference>
+                <Pin Id="KhUlBonjfC9ONgDilMY2L0" Name="Input" Kind="InputPin" />
+                <Pin Id="CrOms4979R3Lj56T7fHHaS" Name="Unit Identifier" Kind="InputPin" />
+                <Pin Id="RjS1CVIuq2jLfiMNsy3Zs9" Name="Starting Address" Kind="InputPin" />
+                <Pin Id="UDFCnw3Pn5qPjSmhNrZDoT" Name="Count" Kind="InputPin" />
+                <Pin Id="UqGXSrPDiiIPfTJimjbXRy" Name="Output" Kind="OutputPin" />
+                <Pin Id="DXdPplE90MaM6ffw7krFQB" Name="Result" Kind="OutputPin" />
+              </Node>
+            </Patch>
+            <ControlPoint Id="DlDEvA7WFOXL9gGobEUDWY" Bounds="158,420" Alignment="Bottom" />
+            <ControlPoint Id="CEfGZSqoNsGMlR4PVXiszz" Bounds="155,326" Alignment="Top" />
+          </Node>
+          <ControlPoint Id="RXqYH66SfNdPN2xGkCULTx" Bounds="158,466" />
         </Canvas>
         <Patch Id="KnPoRluUtTTNwexBJ7wzvN" Name="Create" />
-        <Patch Id="Bhp26qYw3uEMyAYTCQ85PA" Name="Update" />
+        <Patch Id="Bhp26qYw3uEMyAYTCQ85PA" Name="Update">
+          <Pin Id="NmE9ZSHL2YLNm8siauHses" Name="Output" Kind="OutputPin" />
+        </Patch>
         <ProcessDefinition Id="EcXPIXz7TUuPAv2RwHbmjQ">
           <Fragment Id="Ntaaf0lWksuO9Mp7Ef9mYN" Patch="KnPoRluUtTTNwexBJ7wzvN" Enabled="true" />
           <Fragment Id="AJZDXm5AZ49N7MjSiRVqfZ" Patch="Bhp26qYw3uEMyAYTCQ85PA" Enabled="true" />
         </ProcessDefinition>
         <Link Id="Jbrprev9LGYLQyEEAVbQNo" Ids="GQayzErWd0ANwIrcgatUNk,JhLz2fW81DbPQBcOnnAv4V" />
+        <Link Id="SGuZuMwV5jKQaT44PQJwA1" Ids="VLcDbaMS62iM2xgwsjUm3h,Gu9m2EYxkb7Mn2lXrBs8T5" />
+        <Link Id="PKz7mAtfqPoNDVIOcXmS40" Ids="DBpCNGoXPPcL4GSWsoCchz,Kj009ucupYKMjeBzB0uQze" />
+        <Link Id="Ey85MAahK5yMhNL9eCNTvu" Ids="LZ4HaLg3dH4NyoNFnJgHCo,KhUlBonjfC9ONgDilMY2L0" />
+        <Link Id="SMQfhduWQPQK9hKwGAkhcW" Ids="DBpCNGoXPPcL4GSWsoCchz,N6B1c0lIcoVQRLN63WX8Ph" />
+        <Link Id="AdAQqwGTkalPcMh0shaa3o" Ids="CEfGZSqoNsGMlR4PVXiszz,DlDEvA7WFOXL9gGobEUDWY" IsFeedback="true" />
+        <Link Id="MZnRxdzH7JTPfzqe6mwk8p" Ids="DXdPplE90MaM6ffw7krFQB,DlDEvA7WFOXL9gGobEUDWY" />
+        <Link Id="T19SEJWPCe6OuOiWvwUF46" Ids="DlDEvA7WFOXL9gGobEUDWY,RXqYH66SfNdPN2xGkCULTx" />
+        <Link Id="MFoeyoCMd8GMBrsZBEPKld" Ids="RXqYH66SfNdPN2xGkCULTx,NmE9ZSHL2YLNm8siauHses" IsHidden="true" />
       </Patch>
     </Node>
   </Patch>
