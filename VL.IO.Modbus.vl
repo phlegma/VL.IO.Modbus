@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="Q7ZS7BtefRqN9RNbhjp99u" LanguageVersion="2024.6.6" Version="0.128">
+  <NugetDependency Id="QnTYof1Wa6aNBTZ3vbCgch" Location="VL.CoreLib" Version="2024.6.6" />
+  <Patch Id="NKrgKg4Ef9qLkcJEC9DyQW">
+    <Canvas Id="UvREsSpr0ScORSADsNpbVm" DefaultCategory="IO.Modbus" CanvasType="FullCategory">
+      <Canvas Id="L2o6jasi6h4LjG9rqYv07L" Name="Modbus" Position="209,153">
+        <!--
+
+    ************************ ModbusTCPClient ************************
+
+-->
+        <Node Name="ModbusTCPClient" Bounds="308,102" Id="F1UaV2Inb6KNElBWgBPtu0">
+          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+            <Choice Kind="ClassDefinition" Name="Class" />
+          </p:NodeReference>
+          <Patch Id="J7mRgT7O5IaMFwQD0tNDy2">
+            <Canvas Id="JSJhVzTGeORMBRSrgFYu7s" CanvasType="Group">
+              <Node Bounds="523,149,79,26" Id="N1prabToI4MN2ZPNNKJZwZ">
+                <p:NodeReference LastCategoryFullName="FluentModbus.ModbusTcpClient" LastDependency="FluentModbus.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="FluentModbus" />
+                  <CategoryReference Kind="AssemblyCategory" Name="ModbusTcpClient" />
+                  <Choice Kind="OperationCallFlag" Name="Create" />
+                </p:NodeReference>
+                <Pin Id="PtOajXHutCzLp0BPtZmGPw" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Pad Id="L6PGbsHE65JNMzMFCvvYW7" SlotId="MeFyaQFW423Ne0YuNUx5Vh" Bounds="525,261" />
+              <Node Bounds="482,492,103,80" Id="FlL2OeJxGN9PX7oCK4S1pX">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                  <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                </p:NodeReference>
+                <Pin Id="DbWA8refPKeMhGJcrCupQq" Name="Condition" Kind="InputPin" />
+                <Patch Id="KTAZ1ofXDqaN6TvMg1v3SZ" ManuallySortedPins="true">
+                  <Patch Id="M8ykohBpiItPZbuiMZm22q" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="Cr8CWGU6oONLEMj2VNCFNA" Name="Then" ManuallySortedPins="true" />
+                  <Node Bounds="494,520,79,26" Id="TIeIvnw1cjnQdRjbFrcEnV">
+                    <p:NodeReference LastCategoryFullName="FluentModbus.ModbusTcpClient" LastDependency="FluentModbus.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="AssemblyCategory" Name="ModbusTcpClient" NeedsToBeDirectParent="true" />
+                      <Choice Kind="OperationCallFlag" Name="Connect" />
+                      <PinReference Kind="InputPin" Name="Remote Endpoint">
+                        <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                          <Choice Kind="TypeFlag" Name="String" />
+                        </p:DataTypeReference>
+                      </PinReference>
+                    </p:NodeReference>
+                    <Pin Id="MXOACaOVZadNU499N6aXyB" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="SQ0C1dEfmDVNYTQ0ajhUit" Name="Remote Endpoint" Kind="InputPin" />
+                    <Pin Id="IXpXbhXelhPMWfqIFkj1j4" Name="Output" Kind="StateOutputPin" />
+                  </Node>
+                </Patch>
+              </Node>
+              <Node Bounds="375,378,81,19" Id="Ljv7ArNCRVVLs0Yq2uou7l">
+                <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="StringType" Name="String" />
+                  <Choice Kind="OperationCallFlag" Name="IsNullOrEmpty" />
+                </p:NodeReference>
+                <Pin Id="BUBxaD6dVjgLbDUPIOnN9Y" Name="Input" Kind="StateInputPin" />
+                <Pin Id="Neyx517h3wGPlyeDcWZ9tC" Name="Result" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="375,413,37,19" Id="Fg8UcXEIPgzMTc0Lom0fDg">
+                <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="NOT" />
+                </p:NodeReference>
+                <Pin Id="JkMAQgTEfPgOud2aXdpeip" Name="Input" Kind="StateInputPin" />
+                <Pin Id="UoOwp4rybOTMrKFQw5nz8T" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Node Bounds="625,494,103,80" Id="FeZ01uMQqxEPp56Xg0xU0g">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                  <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                </p:NodeReference>
+                <Pin Id="SBgn9xZRIWxNRaRXq1M3SA" Name="Condition" Kind="InputPin" />
+                <Patch Id="INhgllNm0mIOKeh5TapOKv" ManuallySortedPins="true">
+                  <Patch Id="QEdhAJx4rkzMQAYfv0Q4ia" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="RcIiZJLwfvTON68X3E4yfs" Name="Then" ManuallySortedPins="true" />
+                  <Node Bounds="637,522,79,26" Id="UgbdL54on2wLI45wmdf0fj">
+                    <p:NodeReference LastCategoryFullName="FluentModbus.ModbusTcpClient" LastDependency="FluentModbus.dll">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="AssemblyCategory" Name="ModbusTcpClient" />
+                      <Choice Kind="OperationCallFlag" Name="Disconnect" />
+                    </p:NodeReference>
+                    <Pin Id="J0YlKgh0q6gOViAXpg2fJh" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="FcA6GTRfsaOMkzyayWYlrb" Name="Output" Kind="StateOutputPin" />
+                  </Node>
+                </Patch>
+              </Node>
+              <Node Bounds="482,442,37,19" Id="CiI3NVhhO9jNtDAZ1smL4J">
+                <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="AND" />
+                </p:NodeReference>
+                <Pin Id="HkQiqxUiC0WO3KXpyFRpLw" Name="Input" Kind="StateInputPin" />
+                <Pin Id="Uv0JVYH17suP7pZSE9HiAh" Name="Input 2" Kind="InputPin" />
+                <Pin Id="HzXDHSgIeIlPBmDJ6s6k6N" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Node Bounds="515,396,56,19" Id="VBmeL1P2sJNPH8xw3n1ILl">
+                <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="TogEdge" />
+                </p:NodeReference>
+                <Pin Id="TmJUEra4wQkMS6MW2mad8D" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                <Pin Id="SABTtmke4dKPTYfvPYwx25" Name="Value" Kind="InputPin" />
+                <Pin Id="Nz9W4ttaWa9OpeRxCwvssr" Name="Up Edge" Kind="OutputPin" />
+                <Pin Id="BQoxQY9qp4YLdS3iwniERc" Name="Down Edge" Kind="OutputPin" />
+              </Node>
+              <ControlPoint Id="N0OISVw2PP6LrmEKnVQ96F" Bounds="517,379" />
+              <ControlPoint Id="A2djN5nAjG4Nd3Gsc6Sqw0" Bounds="379,320" />
+              <ControlPoint Id="Bgk34I0gaAbOagVeBmIOK1" Bounds="797,509,-1,0" />
+              <ControlPoint Id="Liz3HIfavuCLKO4Fhk21K5" Bounds="547,344" />
+              <Node Bounds="620,395,56,19" Id="OvoAYEJAh8sMVeYqakAGnw">
+                <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="TogEdge" />
+                </p:NodeReference>
+                <Pin Id="VO2U59vBA83OlxTUabKlPT" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                <Pin Id="O90O0YQbJYvLCWMMTvGjix" Name="Value" Kind="InputPin" />
+                <Pin Id="OelF8CGIWKlOAxsxLiitZ1" Name="Up Edge" Kind="OutputPin" />
+                <Pin Id="M7Fl6WB8ColP0pi8bSm9U2" Name="Down Edge" Kind="OutputPin" />
+              </Node>
+              <ControlPoint Id="RZJUr4vYSMtP0i1zFJlRvZ" Bounds="622,383" />
+              <Node Bounds="796,313,104,86" Id="NnKAexDOAAtOUIEmmG7AwP">
+                <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Control" />
+                  <Choice Kind="ProcessAppFlag" Name="Try" />
+                </p:NodeReference>
+                <Pin Id="OMTPXePiZOmNvwpsYUAPS4" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                <Pin Id="MXNYgZJd700OIXAT8te733" Name="User Exceptions Channel" Kind="InputPin" IsHidden="true" />
+                <Pin Id="Ttz7BeZyXchOxGG21QT7iX" Name="Stick To Last Valid Outputs" Kind="InputPin" />
+                <Pin Id="L3EPcIMPswvM4VKFb79Ulu" Name="Reset Region On Failure" Kind="InputPin" />
+                <Pin Id="CGIDtIg5NdSPZme99LQpQV" Name="Success" Kind="OutputPin" />
+                <Pin Id="ToOe6GnBeCyPtfHyBJTHr3" Name="Failure" Kind="OutputPin" />
+                <Pin Id="DCMFFyvFJLsOcQ4NKJVfcV" Name="Error Message" Kind="OutputPin" />
+                <Pin Id="NMoQWszROq6NDmLUMIpJT1" Name="Exceptions" Kind="OutputPin" />
+                <Patch Id="UJtwGwxwxOPNsOA0gkTAvV" ManuallySortedPins="true">
+                  <Patch Id="EhNpSZiAkj3ObXZllYBEBd" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="LunsxULGZbgLwmVDEE1RRF" Name="Update" ManuallySortedPins="true" />
+                  <Patch Id="RQ4ni6fv1ynN6OQaf7Ld3P" Name="Dispose" ManuallySortedPins="true" />
+                  <Node Bounds="808,344,79,26" Id="PVYDGqTAmTgOfpsaaAy49O">
+                    <p:NodeReference LastCategoryFullName="FluentModbus.ModbusTcpClient" LastDependency="FluentModbus.dll">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="AssemblyCategory" Name="ModbusTcpClient" />
+                      <Choice Kind="OperationCallFlag" Name="IsConnected" />
+                    </p:NodeReference>
+                    <Pin Id="PqywOAyqrqaMawMXHclYPs" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="ARyHe5R7l8UL3gHkKd0gCh" Name="Output" Kind="OutputPin" />
+                    <Pin Id="CSjFuine9hWPIwNTn2yyYs" Name="Is Connected" Kind="OutputPin" />
+                  </Node>
+                </Patch>
+                <ControlPoint Id="BMfZ5qTMXbROupLZOzDeYt" Bounds="885,393" Alignment="Bottom" />
+              </Node>
+              <Node Bounds="795,464,37,19" Id="EvPamMkgsFjMZ9HO4sUWaB">
+                <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="AND" />
+                </p:NodeReference>
+                <Pin Id="KbHtaGgKlXrPnnCsIqTZq3" Name="Input" Kind="StateInputPin" />
+                <Pin Id="Nbj5NU7UEYcNydfyAGyDqM" Name="Input 2" Kind="InputPin" />
+                <Pin Id="Sb6qYv6HPjLQVQyjdmvJhG" Name="Output" Kind="StateOutputPin" />
+              </Node>
+            </Canvas>
+            <ProcessDefinition Id="D4N8169H6gCP2ijXNQx46s">
+              <Fragment Id="CauPNdcxsNbLuknuigsKSb" Patch="JeRmzubrVwCO1s4WDKjRRI" Enabled="true" />
+              <Fragment Id="JKnWBj5vioTLoM7ODyjYSJ" Patch="G9mHF5Z61dTP4gPcnNQwEe" Enabled="true" />
+            </ProcessDefinition>
+            <Slot Id="MeFyaQFW423Ne0YuNUx5Vh" Name="Client" />
+            <Link Id="HuFn2PzpCVpNAIBYO5GxYT" Ids="PtOajXHutCzLp0BPtZmGPw,L6PGbsHE65JNMzMFCvvYW7" />
+            <Link Id="UVwUWqLRuZTLiRiJxYzMm9" Ids="L6PGbsHE65JNMzMFCvvYW7,MXOACaOVZadNU499N6aXyB" />
+            <Link Id="LpCsQlPom8QMhFlw5S7N1C" Ids="Neyx517h3wGPlyeDcWZ9tC,JkMAQgTEfPgOud2aXdpeip" />
+            <Link Id="HEXbZ6UWaoeOb7hJb3JwiN" Ids="L6PGbsHE65JNMzMFCvvYW7,J0YlKgh0q6gOViAXpg2fJh" />
+            <Link Id="U4zXVsVsBdROCcHIcN2pX4" Ids="HzXDHSgIeIlPBmDJ6s6k6N,DbWA8refPKeMhGJcrCupQq" />
+            <Link Id="AevTFBTMcacNFzn8IGwBES" Ids="L6PGbsHE65JNMzMFCvvYW7,PqywOAyqrqaMawMXHclYPs" />
+            <Link Id="F6o5YXuRHRWM9awhiqxk62" Ids="DVEvVqyv1Z4Nog98tlkDuL,N0OISVw2PP6LrmEKnVQ96F" IsHidden="true" />
+            <Link Id="Oij4UsstCrDL5qQunzPz5K" Ids="N0OISVw2PP6LrmEKnVQ96F,SABTtmke4dKPTYfvPYwx25" />
+            <Link Id="FI6lUJjvlGoLlAiUpzTl7Q" Ids="A2djN5nAjG4Nd3Gsc6Sqw0,BUBxaD6dVjgLbDUPIOnN9Y" />
+            <Link Id="LWmpEoFACvUMTwPzRSlZka" Ids="THwtT9QzbDfL2bCPNjr2mh,A2djN5nAjG4Nd3Gsc6Sqw0" IsHidden="true" />
+            <Link Id="DSgrLWfL23AO7UIXjG1xSA" Ids="A2djN5nAjG4Nd3Gsc6Sqw0,SQ0C1dEfmDVNYTQ0ajhUit" />
+            <Link Id="I6qC74yETNQQMdCaPkevV4" Ids="UoOwp4rybOTMrKFQw5nz8T,HkQiqxUiC0WO3KXpyFRpLw" />
+            <Link Id="FebOis2s2KFP5368Dj5T2v" Ids="Bgk34I0gaAbOagVeBmIOK1,Spc3CKs5QR1NLIe6vavkRj" IsHidden="true" />
+            <Link Id="VfcEDP9nrt3OanhCvXqUXe" Ids="L6PGbsHE65JNMzMFCvvYW7,Liz3HIfavuCLKO4Fhk21K5" />
+            <Link Id="CZYf3DkR2sxLLBg2X89aIh" Ids="Liz3HIfavuCLKO4Fhk21K5,HFURf7r9ghgMWEgDQnLMUf" IsHidden="true" />
+            <Patch Id="JeRmzubrVwCO1s4WDKjRRI" Name="Create" ParticipatingElements="N1prabToI4MN2ZPNNKJZwZ" />
+            <Patch Id="G9mHF5Z61dTP4gPcnNQwEe" Name="Update">
+              <Pin Id="THwtT9QzbDfL2bCPNjr2mh" Name="IP Adresse" Kind="InputPin" Bounds="706,188" />
+              <Pin Id="DVEvVqyv1Z4Nog98tlkDuL" Name="Start" Kind="InputPin" Bounds="452,195" />
+              <Pin Id="HFURf7r9ghgMWEgDQnLMUf" Name="Client" Kind="OutputPin" Bounds="825,525" />
+              <Pin Id="Spc3CKs5QR1NLIe6vavkRj" Name="Is Connected" Kind="OutputPin" Bounds="367,677" />
+              <Pin Id="NLu9bckv2s4P69AYXmndii" Name="Stop" Kind="InputPin" Bounds="622,383" />
+            </Patch>
+            <Link Id="S7gVGqdBIfeOCKNzUdHwCf" Ids="Nz9W4ttaWa9OpeRxCwvssr,Uv0JVYH17suP7pZSE9HiAh" />
+            <Link Id="Kj0cBx1U6jRQbiELUWnDck" Ids="OelF8CGIWKlOAxsxLiitZ1,SBgn9xZRIWxNRaRXq1M3SA" />
+            <Link Id="UxV7n0ce9DRQCtuFwkS9Kr" Ids="RZJUr4vYSMtP0i1zFJlRvZ,O90O0YQbJYvLCWMMTvGjix" />
+            <Link Id="CeIZG3aXe44MbFBCilFGMi" Ids="NLu9bckv2s4P69AYXmndii,RZJUr4vYSMtP0i1zFJlRvZ" IsHidden="true" />
+            <Link Id="RRC1lAf3IRVO605CS27Tq5" Ids="CSjFuine9hWPIwNTn2yyYs,BMfZ5qTMXbROupLZOzDeYt" />
+            <Link Id="VdgkWN1fpzSOvV2D3EbK9k" Ids="Sb6qYv6HPjLQVQyjdmvJhG,Bgk34I0gaAbOagVeBmIOK1" />
+            <Link Id="IgOK2fEyfjJOsgKDfWWae4" Ids="BMfZ5qTMXbROupLZOzDeYt,Nbj5NU7UEYcNydfyAGyDqM" />
+            <Link Id="TOpO1T2govFNBD26DOUran" Ids="CGIDtIg5NdSPZme99LQpQV,KbHtaGgKlXrPnnCsIqTZq3" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ ReadHoldingRegisters ************************
+
+-->
+        <Node Name="ReadHoldingRegisters" Bounds="307,264,140,80" Id="ETR6gaeOzqnPzyCjktEmRQ">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="LX15nq2VeIiMuSSWqGlIUo" IsGeneric="true">
+            <Node Bounds="319,292,116,26" AutoConnect="true" Id="E7S2CR8Dx3kLA4cC9zbVbH">
+              <p:NodeReference LastCategoryFullName="FluentModbus.ModbusClient" LastDependency="FluentModbus.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                <Choice Kind="OperationNode" Name="ReadHoldingRegisters" />
+                <FullNameCategoryReference ID="FluentModbus.ModbusClient" />
+                <PinReference Kind="InputPin" Name="Input" />
+                <PinReference Kind="InputPin" Name="Unit Identifier" />
+                <PinReference Kind="InputPin" Name="Starting Address" />
+                <PinReference Kind="InputPin" Name="Count" />
+              </p:NodeReference>
+              <Pin Id="ONDAsSBWZToQEOW3hMfRvI" Name="Input" Kind="StateInputPin" />
+              <Pin Id="UleOoBzZpy7O3kTrX5KhjY" Name="Unit Identifier" Kind="InputPin" />
+              <Pin Id="Ku29Cqz85RwLjCYkVhzcs2" Name="Starting Address" Kind="InputPin" />
+              <Pin Id="DiXsbkyUzwaMPiCeCyWgWR" Name="Count" Kind="InputPin" />
+              <Pin Id="RLsKF2EzWPmQJst8QhTQsS" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="VqChF3VfhnSPAQt1IAZFfJ" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="L3MDUN8ZDvBNTxUOQhy6fH" Name="Input" Kind="InputPin" />
+            <Pin Id="Bd25KzQUZoyNphDd2OCBtV" Name="Unit Identifier" Kind="InputPin" />
+            <Pin Id="DLGmV5WI4djPIFDU190T8U" Name="Starting Address" Kind="InputPin" />
+            <Pin Id="AW71U7wKpYJOLcU0m3qcPm" Name="Count" Kind="InputPin" />
+            <Pin Id="IAl9FqQ5bAeQHse5L6O4st" Name="Output" Kind="OutputPin" />
+            <Pin Id="NHW2sQ3EFHzO9J8L2nUcjZ" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ ReadCoils ************************
+
+-->
+        <Node Name="ReadCoils" Bounds="312,394,112,80" Id="JAxoqmYsDy5LwtWCq5hKkB">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="AuIfBY1f6RlM9a52W5mhX0">
+            <Node Bounds="324,422,66,26" AutoConnect="true" Id="NyS9tYp6Y3cQEIXBlzut0q">
+              <p:NodeReference LastCategoryFullName="FluentModbus.ModbusClient" LastDependency="FluentModbus.dll">
+                <Choice Kind="OperationNode" Name="ReadCoils" />
+                <FullNameCategoryReference ID="FluentModbus.ModbusClient" />
+              </p:NodeReference>
+              <Pin Id="Ehl38yj70cRO0Xobj2A82P" Name="Input" Kind="StateInputPin" />
+              <Pin Id="AmGRNwHLmDaPicsOVOVJGJ" Name="Unit Identifier" Kind="InputPin" />
+              <Pin Id="DAqNJEoM6tbPhZrej3Q0w0" Name="Starting Address" Kind="InputPin" />
+              <Pin Id="RgY9Z2azEyYM1TAvL2O5We" Name="Quantity" Kind="InputPin" />
+              <Pin Id="BWe1ShrUvXKLQ9RFDdQSXx" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="VAoR3sUkbIGNQv23VVsaKq" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="PU47sJg5HjSLO6kLFsH1R5" Name="Input" Kind="InputPin" />
+            <Pin Id="SLhbE5ysGdFPtBJdluuc7O" Name="Unit Identifier" Kind="InputPin" />
+            <Pin Id="K20c9V7vnw7OqiSSeUGuVp" Name="Starting Address" Kind="InputPin" />
+            <Pin Id="CzktTtREvMPPmLoBcf94Sv" Name="Quantity" Kind="InputPin" />
+            <Pin Id="CRtkaZzg0YaPCNggKTiLBc" Name="Output" Kind="OutputPin" />
+            <Pin Id="EaC5Kqem0EOOlWpexe6DkB" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ ReadDiscreteInputs ************************
+
+-->
+        <Node Name="ReadDiscreteInputs" Bounds="312,520,128,80" Id="BH65CGwxRFVPhE5yymxgSi">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="Ii36mBTUXhFQUt1j0pYt9z">
+            <Node Bounds="324,549,104,26" AutoConnect="true" Id="P3oIB9Qn6xZL8murOfcYES">
+              <p:NodeReference LastCategoryFullName="FluentModbus.ModbusClient" LastDependency="FluentModbus.dll">
+                <Choice Kind="OperationNode" Name="ReadDiscreteInputs" />
+                <FullNameCategoryReference ID="FluentModbus.ModbusClient" />
+              </p:NodeReference>
+              <Pin Id="MBgqpZrKoZbNaM1WHo041C" Name="Input" Kind="StateInputPin" />
+              <Pin Id="PTwSQMsHekWOPcFqBaIpR1" Name="Unit Identifier" Kind="InputPin" />
+              <Pin Id="SjBmKoImXtxOFSSciMgzg9" Name="Starting Address" Kind="InputPin" />
+              <Pin Id="IJvOm9jCespPWRD2S20YSl" Name="Quantity" Kind="InputPin" />
+              <Pin Id="VZatFrvObtOOTwy5exrn2Q" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="Nao7JTrdfCgMDf4GlMgmYz" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="R2gvej5EMYzNo2lqXwZWOI" Name="Input" Kind="InputPin" />
+            <Pin Id="IXbCaiueQcSNbtYrqIbCxl" Name="Unit Identifier" Kind="InputPin" />
+            <Pin Id="CI0syMDCGESNjf9SyAwbO4" Name="Starting Address" Kind="InputPin" />
+            <Pin Id="AndUoWULUPpK9zlamIpFsC" Name="Quantity" Kind="InputPin" />
+            <Pin Id="UaofTkRBqUCMjzxpMbrM2p" Name="Output" Kind="OutputPin" />
+            <Pin Id="DneKNT07SXmOkpenbGzcwU" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ ReadInputRegisters ************************
+
+-->
+        <Node Name="ReadInputRegisters" Bounds="317,648,128,80" Id="GCk5eS4ZPvvOfRzPrKGgsR">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="Ax8Y4CaTi5vL4U9ydOwwO8" IsGeneric="true">
+            <Node Bounds="329,677,104,26" AutoConnect="true" Id="Mtqvjgy7Ab6ODHULh7gEYa">
+              <p:NodeReference LastCategoryFullName="FluentModbus.ModbusClient" LastDependency="FluentModbus.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                <Choice Kind="OperationNode" Name="ReadInputRegisters" />
+                <FullNameCategoryReference ID="FluentModbus.ModbusClient" />
+                <PinReference Kind="InputPin" Name="Input" />
+                <PinReference Kind="InputPin" Name="Unit Identifier" />
+                <PinReference Kind="InputPin" Name="Starting Address" />
+                <PinReference Kind="InputPin" Name="Count" />
+              </p:NodeReference>
+              <Pin Id="OqSGx6tkMSROr35icww9tC" Name="Input" Kind="StateInputPin" />
+              <Pin Id="PgswJv1yp7zMJo61HUcIlF" Name="Unit Identifier" Kind="InputPin" />
+              <Pin Id="TlzQHe0jZPVLtCA607lK3C" Name="Starting Address" Kind="InputPin" />
+              <Pin Id="KMJFpSvCTfVNg477fmFOR8" Name="Count" Kind="InputPin" />
+              <Pin Id="LThXui0XuZ6PjytORUfj2c" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="StG2T1CUNOVQYLCWHtEWYQ" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="T5NTNIDNnlsPGEzUd06P9u" Name="Input" Kind="InputPin" />
+            <Pin Id="AYAIZU6pfLQPGc3OdD1Rzr" Name="Unit Identifier" Kind="InputPin" />
+            <Pin Id="N48AQGfNAnNL4bsn5K54lX" Name="Starting Address" Kind="InputPin" />
+            <Pin Id="NXyjKMxP7qTMpNIcIkduuY" Name="Count" Kind="InputPin" />
+            <Pin Id="I6gN6RpeC4pPeebkMZqUh1" Name="Output" Kind="OutputPin" />
+            <Pin Id="L0AoQIFNIFLP4OEfT51CEH" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ ReadWriteMultipleRegisters ************************
+
+-->
+        <Node Name="ReadWriteMultipleRegisters" Bounds="315,782,164,80" Id="BROEQTWqi1yMqwVQJSAMcw">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="GeUDMeWXZrMPGDufxVbi7c" IsGeneric="true">
+            <Node Bounds="327,810,140,26" AutoConnect="true" Id="KiW6EEDiiZNO0ji9kZvMd9">
+              <p:NodeReference LastCategoryFullName="FluentModbus.ModbusClient" LastDependency="FluentModbus.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                <Choice Kind="OperationNode" Name="ReadWriteMultipleRegisters" />
+                <FullNameCategoryReference ID="FluentModbus.ModbusClient" />
+                <PinReference Kind="InputPin" Name="Input" />
+                <PinReference Kind="InputPin" Name="Unit Identifier" />
+                <PinReference Kind="InputPin" Name="Read Starting Address" />
+                <PinReference Kind="InputPin" Name="Read Count" />
+              </p:NodeReference>
+              <Pin Id="AlCbs8SjekUP3BuQpvl6B3" Name="Input" Kind="StateInputPin" />
+              <Pin Id="ELZ9xH2P60HNB0djMSWIeQ" Name="Unit Identifier" Kind="InputPin" />
+              <Pin Id="JMoAe2Dk8fALI5ERdPHsO4" Name="Read Starting Address" Kind="InputPin" />
+              <Pin Id="Py2BFIKv9SMQdPjXgIfykd" Name="Read Count" Kind="InputPin" />
+              <Pin Id="TO7G4M96TvhMzhf1cMx1OZ" Name="Write Starting Address" Kind="InputPin" />
+              <Pin Id="NC362S8j0bGNnZoe07h8Jr" Name="Dataset" Kind="InputPin" />
+              <Pin Id="TrVuzwiuDX6P1sWUkG0dng" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="GpddJ1AkzGJObK8bHWPhEP" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pin Id="DULk3Dz4JBUM9LhDNJy9it" Name="Input" Kind="InputPin" />
+            <Pin Id="FjpMXePPF0mPTCHIb5zGMt" Name="Unit Identifier" Kind="InputPin" />
+            <Pin Id="Quo76ReSDU3Ltt4Jx9Ahxe" Name="Read Starting Address" Kind="InputPin" />
+            <Pin Id="FkJ0sCkNYFePY92bRKYfjt" Name="Read Count" Kind="InputPin" />
+            <Pin Id="MbYnYd4IzinOXtqlDhdiQJ" Name="Write Starting Address" Kind="InputPin" />
+            <Pin Id="ETnu6i9n9vaPHoIplH1Jlv" Name="Dataset" Kind="InputPin" />
+            <Pin Id="JpVegNWgBa8LLDKk3M8hAd" Name="Output" Kind="OutputPin" />
+            <Pin Id="Hmlo6VGgnzPM9OLAqCUssv" Name="Result" Kind="OutputPin" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ WriteMultipleRegisters ************************
+
+-->
+        <Node Name="WriteMultipleRegisters" Bounds="617,498,142,80" Id="Akdb0M5GzZJQRP1oPlY2pb">
+          <p:NodeReference>
+            <Choice Kind="OperationDefinition" Name="Operation" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+          <Patch Id="UWtkskaA7VlNRTemRFlXSS" IsGeneric="true">
+            <Node Bounds="629,526,118,26" AutoConnect="true" Id="UF1SeL9CSpqNx6peVl5ywQ">
+              <p:NodeReference LastCategoryFullName="FluentModbus.ModbusClient" LastDependency="FluentModbus.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                <Choice Kind="OperationNode" Name="WriteMultipleRegisters" />
+                <FullNameCategoryReference ID="FluentModbus.ModbusClient" />
+                <PinReference Kind="InputPin" Name="Input">
+                  <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="FluentModbus" LastDependency="FluentModbus.dll">
+                    <Choice Kind="TypeFlag" Name="ModbusClient" />
+                  </p:DataTypeReference>
+                </PinReference>
+                <PinReference Kind="InputPin" Name="Unit Identifier">
+                  <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="System" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Int32" />
+                  </p:DataTypeReference>
+                </PinReference>
+              </p:NodeReference>
+              <Pin Id="SOQpKPyPDKMOixa1wzaV3g" Name="Input" Kind="StateInputPin" />
+              <Pin Id="Kaf8GyAsac7MiNfpVY2MMW" Name="Unit Identifier" Kind="InputPin" />
+              <Pin Id="Pfar4WdRuvkNr5L7eCo9TV" Name="Starting Address" Kind="InputPin" />
+              <Pin Id="VcpOm72TLE2P9ljyKbXkjB" Name="Dataset" Kind="InputPin" />
+              <Pin Id="FiJ4QF9m3aaOAvh5X1zWjc" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Pin Id="Ahomt0GLrgNPQqXdDFEpo0" Name="Input" Kind="InputPin" />
+            <Pin Id="S8Aq8lRfiJaPvQn0JphAWI" Name="Unit Identifier" Kind="InputPin" />
+            <Pin Id="T8Noc99pQdSMdxQ4t1jjsd" Name="Starting Address" Kind="InputPin" />
+            <Pin Id="MzHO0qorFBSLy5rMeQuscV" Name="Dataset" Kind="InputPin" />
+            <Pin Id="GVFTyrHoAKPPN5gBgVL9Sb" Name="Output" Kind="OutputPin" />
+          </Patch>
+        </Node>
+      </Canvas>
+    </Canvas>
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="Vzo2z3zWeWZOgKsmwN8tCK">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="OGTwIOnF1chP9d6XKt2YMK">
+        <Canvas Id="BZQZ3M4W1cgN5MwinWECoG" CanvasType="Group" />
+        <Patch Id="HqOYHIRActiMybtmVt6RFX" Name="Create" />
+        <Patch Id="MsgYcMZj1zfPO7LnDUon3q" Name="Update" />
+        <ProcessDefinition Id="BJZRV8TQRQvQF3EfQkZEas">
+          <Fragment Id="H664yXgkLfZP2wMJxOtz40" Patch="HqOYHIRActiMybtmVt6RFX" Enabled="true" />
+          <Fragment Id="BdN0sYg1oytLh7WM7AHt4j" Patch="MsgYcMZj1zfPO7LnDUon3q" Enabled="true" />
+        </ProcessDefinition>
+      </Patch>
+    </Node>
+    <Patch Id="UNCCgjvrDERLTNdOksojxI" Name="Create" />
+  </Patch>
+  <NugetDependency Id="DOLxDrW2XqvNClh1fEXjBD" Location="FluentModbus" Version="5.2.0" />
+</Document>

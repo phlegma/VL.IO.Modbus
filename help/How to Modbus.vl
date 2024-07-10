@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="BUHGogY9RSNNeI4Y9978X0" LanguageVersion="2024.6.6" Version="0.128">
+  <NugetDependency Id="RiYNT4n3hT5MQ7peH9bi5n" Location="VL.CoreLib" Version="2024.6.6" />
+  <Patch Id="RoppdK6QsINOIZAZAwq9Dv">
+    <Canvas Id="KK05DdZ4UKeN2XH2Gfw2qp" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="Q9PZS5GxNq0MbWg3A9bhSm">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="Ow15Ca9PLxsPvi3X5Yf5Qs">
+        <Canvas Id="IMSb7B1P9aNNyl61E9d8TT" CanvasType="Group">
+          <Node Bounds="96,129,96,19" Id="BUjlRsKUWjzMWsKkZLdF6j">
+            <p:NodeReference LastCategoryFullName="IO.Modbus.Modbus" LastDependency="VL.IO.Modbus.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Modbus" />
+              <Choice Kind="ProcessAppFlag" Name="ModbusTCPClient" />
+            </p:NodeReference>
+            <Pin Id="J9gYNAdzfRwMnAsdouRdDX" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="JhLz2fW81DbPQBcOnnAv4V" Name="IP Adresse" Kind="InputPin" />
+            <Pin Id="LZ4HaLg3dH4NyoNFnJgHCo" Name="Client" Kind="OutputPin" />
+            <Pin Id="DBpCNGoXPPcL4GSWsoCchz" Name="Is Connected" Kind="OutputPin" />
+            <Pin Id="Gu9m2EYxkb7Mn2lXrBs8T5" Name="Enable" Kind="InputPin" />
+          </Node>
+          <Pad Id="GQayzErWd0ANwIrcgatUNk" Comment="IP Adresse" Bounds="99,65,35,15" ShowValueBox="true" isIOBox="true" Value="">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+        </Canvas>
+        <Patch Id="KnPoRluUtTTNwexBJ7wzvN" Name="Create" />
+        <Patch Id="Bhp26qYw3uEMyAYTCQ85PA" Name="Update" />
+        <ProcessDefinition Id="EcXPIXz7TUuPAv2RwHbmjQ">
+          <Fragment Id="Ntaaf0lWksuO9Mp7Ef9mYN" Patch="KnPoRluUtTTNwexBJ7wzvN" Enabled="true" />
+          <Fragment Id="AJZDXm5AZ49N7MjSiRVqfZ" Patch="Bhp26qYw3uEMyAYTCQ85PA" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="Jbrprev9LGYLQyEEAVbQNo" Ids="GQayzErWd0ANwIrcgatUNk,JhLz2fW81DbPQBcOnnAv4V" />
+      </Patch>
+    </Node>
+  </Patch>
+  <DocumentDependency Id="QyMOBZ35n5OMgzCzy6ZNep" Location="../VL.IO.Modbus.vl" IsForward="true" />
+</Document>
