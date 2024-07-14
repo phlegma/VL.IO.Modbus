@@ -30,5 +30,6 @@
     <file src="..\*.vl" target="" exclude="" />
     <file src="..\help\**" target="help\" exclude="" />
     <file src="..\README.md" target="docs\" />
+    <file src="nugeticon.png" target="icon\" />
   </files>
 </package>
