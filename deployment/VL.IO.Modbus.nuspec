@@ -6,19 +6,19 @@
 
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
-    <id>VL.NewLibrary.Template</id>
+    <id>VL.IO.Modbus</id>
     <!-- For more about versions see: https://thegraybook.vvvv.org/reference/extending/publishing.html#version -->
     <version>0.0.1-alpha</version>
-    <title>VL.NewLibrary.Template</title>
+    <title>VL.IO.Modbus</title>
     <!-- Provide authors and projectUrl --> 
-    <authors></authors>
-    <projectUrl></projectUrl>
+    <authors>phlegma</authors>
+    <projectUrl>https://github.com/phlegma/VL.IO.Modbus</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Provide description and tags-->
-    <description></description>
-    <tags>VL</tags>
+    <description>VL wrapper for the FluentModus libary</description>
+    <tags>VL, Modbus, ModbusTCP</tags>
     <license type="expression">LGPL-3.0-only</license>
-    <icon>icon\nugeticon.png</icon>
+    <icon></icon>
     <readme>docs\README.md</readme>
   </metadata>
   <files>
@@ -26,7 +26,6 @@
 	  <!-- <file src="..\runtimes\**\*.dll" target="runtimes\" exclude="" /> -->
     <file src="..\*.vl" target="" exclude="" />
     <file src="..\help\**" target="help\" exclude="" />
-    <file src="nugeticon.png" target="icon\" />
     <file src="..\README.md" target="docs\" />
   </files>
 </package>
