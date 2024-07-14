@@ -18,7 +18,7 @@
     <description>VL wrapper for the FluentModus libary</description>
     <tags>VL, Modbus, ModbusTCP</tags>
     <license type="expression">MIT</license>
-    <icon></icon>
+    <icon>icon\nugeticon.png</icon>
     <dependencies>
       <dependency id="FluentModbus" version="5.2.0" />
     </dependencies>
