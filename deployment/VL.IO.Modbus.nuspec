@@ -17,8 +17,11 @@
     <!-- Provide description and tags-->
     <description>VL wrapper for the FluentModus libary</description>
     <tags>VL, Modbus, ModbusTCP</tags>
-    <license type="expression">LGPL-3.0-only</license>
+    <license type="expression">MIT</license>
     <icon></icon>
+    <dependencies>
+      <dependency id="FluentModbus" version="5.2.0" />
+    </dependencies>
     <readme>docs\README.md</readme>
   </metadata>
   <files>
