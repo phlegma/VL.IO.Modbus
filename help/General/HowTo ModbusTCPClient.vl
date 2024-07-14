@@ -51,7 +51,7 @@
             <Patch Id="SPxjgMjapRrPMIigYD18QW" ManuallySortedPins="true">
               <Patch Id="UrvnhdnZmglPy1hSHkj5kJ" Name="Create" ManuallySortedPins="true" />
               <Patch Id="CDpyvu3E1VKMijNLJ3iBez" Name="Then" ManuallySortedPins="true" />
-              <Node Bounds="58,453,104,19" Id="LR0P3GfrY9JLZy2sKdbkbT">
+              <Node Bounds="58,453,104,26" Id="LR0P3GfrY9JLZy2sKdbkbT">
                 <p:NodeReference LastCategoryFullName="IO.Modbus.Modbus" LastDependency="VL.IO.Modbus.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="Category" Name="Modbus" />
@@ -88,7 +88,7 @@
             <Patch Id="EUu0kVEhmpiPe3zhnbEOfi" ManuallySortedPins="true">
               <Patch Id="UUWWmWT2pSHMqm32ze6xBH" Name="Create" ManuallySortedPins="true" />
               <Patch Id="AGUCz9ItTgKM1aPeB2pyh3" Name="Then" ManuallySortedPins="true" />
-              <Node Bounds="345,562,165,19" Id="Io6GP8Ad7YuNZr7qpi3FB6">
+              <Node Bounds="345,562,165,26" Id="Io6GP8Ad7YuNZr7qpi3FB6">
                 <p:NodeReference LastCategoryFullName="IO.Modbus.TCP" LastDependency="VL.IO.Modbus.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="WriteMultipleRegisters" />

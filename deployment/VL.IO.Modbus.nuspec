@@ -8,7 +8,7 @@
   <metadata>
     <id>VL.IO.Modbus</id>
     <!-- For more about versions see: https://thegraybook.vvvv.org/reference/extending/publishing.html#version -->
-    <version>0.0.4-alpha</version>
+    <version>0.0.5-alpha</version>
     <title>VL.IO.Modbus</title>
     <!-- Provide authors and projectUrl --> 
     <authors>phlegma</authors>
