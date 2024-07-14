@@ -30,4 +30,5 @@ jobs:
       uses: vvvv/PublishVLNuget@1.0.43
       with:
         # Provide the nuget key. See: https://thegraybook.vvvv.org/reference/extending/publishing.html#getting-a-nugetorg-api-key
+        nuspec: deployment\VL.IO.Modbus.nuspec
         nuget-key: ${{ secrets.NUGET_KEY }}
