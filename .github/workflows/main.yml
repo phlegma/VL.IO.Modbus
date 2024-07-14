@@ -32,3 +32,5 @@ jobs:
         # Provide the nuget key. See: https://thegraybook.vvvv.org/reference/extending/publishing.html#getting-a-nugetorg-api-key
         nuspec: deployment\VL.IO.Modbus.nuspec
         nuget-key: ${{ secrets.NUGET_KEY }}
+        icon-src: https://raw.githubusercontent.com/vvvv/PublicContent/master/nugeticon.png
+        icon-dst: ./deployment/nugeticon.png
